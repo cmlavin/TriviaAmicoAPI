@@ -1,6 +1,10 @@
 class Api::V1::UsersController < ApplicationController
   skip_before_action :authorized, only: [:create]
 
+  def me
+    render json: current_user
+  end
+  
   def create
     @user = User.new(username: params[:username], password: params[:password], email: params[:email])
     if @user.save
@@ -13,5 +17,5 @@ class Api::V1::UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:username, :password, :email)
   end
-  
+
 end
