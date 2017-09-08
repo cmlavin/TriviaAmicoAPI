@@ -6,7 +6,7 @@ class Api::V1::SessionsController < ApplicationController
     if user && user.authenticate(params[:password])
       payload = { user_id: user.id }
       token = issue_token(payload)
-      render json: { jwt: token }
+      render json: { jwt: token, user: user }
     else
       render json: { error: "Something went wrong." }
     end
