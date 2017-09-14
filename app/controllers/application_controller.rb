@@ -3,12 +3,12 @@ class ApplicationController < ActionController::API
   before_action :authorized
 
   def issue_token(payload)
-    JWT.encode(payload, "learnlovecode")
+    JWT.encode(payload, ENV["SECRET"])
   end
 
   def decoded_token(token)
     begin
-      JWT.decode(token, "learnlovecode")
+      JWT.decode(token, ENV["SECRET"], true, { :algorithm => ENV["BIG_SECRET"]})
     rescue JWT::DecodeError
       return nil
     end
