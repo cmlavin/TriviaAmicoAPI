@@ -10,7 +10,7 @@ categories.each do |category|
   Game.create(category: category, difficulty: "easy", num_questions: 4)
 end
 
-numbers = [1..10]
+numbers = (1..10).to_a
 numbers.each do |num|
   Score.create(user_id: num, score: 400, game_id: num)
 end
