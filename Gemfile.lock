@@ -44,6 +44,8 @@ GEM
     byebug (9.1.0)
     concurrent-ruby (1.0.5)
     erubi (1.6.1)
+    faker (1.6.1)
+      i18n (~> 0.5)
     ffi (1.9.18)
     figaro (1.1.1)
       thor (~> 0.14)
@@ -128,6 +130,7 @@ PLATFORMS
 DEPENDENCIES
   bcrypt (~> 3.1.7)
   byebug
+  faker
   figaro
   jwt
   listen (>= 3.0.5, < 3.2)
@@ -140,4 +143,4 @@ DEPENDENCIES
   tzinfo-data
 
 BUNDLED WITH
-   1.15.4
+   1.16.0.pre.3
