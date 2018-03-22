@@ -1,2 +1,7 @@
-This is the backend for Trivia Amico (https://github.com/cmlavin/TriviaAmico).  The game can be played at
-http://triviaamico.herokuapp.com/.
+# Trivia Amico
+
+[Trivia Amico Demo](http://triviaamico.herokuapp.com/)<br>
+[Trivia Amico Github Front-end](https://github.com/cmlavin/TriviaAmico)<br>
+[Trivia Amico Github Back-end](https://github.com/cmlavin/TriviaAmicoAPI)<br>
+
+This is the back-end for Trivia Amico.
